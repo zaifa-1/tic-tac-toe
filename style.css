@@ -1,0 +1,120 @@
+:root{
+    --complement:#7224f7;
+    --main:#22d3f7;
+    --text:#d3f724;
+    --gameText:'Indie Flower','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --boardTextColor:#f7c724;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Fredoka One';
+    text-transform: capitalize;
+    background-color: var(--complement);
+    color: var(--text);
+    padding: 20px;
+    word-spacing: 30px;
+    letter-spacing: 10px;
+    box-shadow: 0px 2px 5px #472762;
+}
+body{
+    background-color: var(--main);
+    color: var(--text);
+}
+
+.player-turn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px ;
+    text-align: center;
+    box-sizing: border-box;
+    width: 700px;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: auto;
+}
+#player-two, #player-one{
+    filter: brightness(50%);
+}
+#player-one.active, #player-two.active{
+    filter: brightness(100%);
+    transition: 0.3s;
+}
+.sign{
+    font-size: 1.6em;
+    margin: 10px;
+    font-family: var(--gameText);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 450px;
+    margin: auto;
+    background-color: var(--complement);
+    grid-gap: 2px;
+    font-family: var(--gameText);
+}
+
+.grid-item{
+    height: 150px;
+    background-color: var(--main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7em;
+    color: var(--boardTextColor);
+
+}
+.button{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.restart{
+    padding: 15px 35px;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    background-color: var(--complement);
+    color: var(--text);
+    box-shadow: 0px 0px 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: .2s;
+}
+.restart:hover{
+    background-color: var(--main);
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, .8);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    font-size: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(246, 255, 0);
+
+}
+
+
+.overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
