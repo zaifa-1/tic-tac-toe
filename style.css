@@ -75,7 +75,7 @@ body{
 .button{
     display: flex;
     justify-content: center;
-    margin: 30px;
+    margin-top: 30px;
 }
 
 .restart{
@@ -136,7 +136,7 @@ body{
     .grid-item{
         height: 130px;
     }
-    .restart{
+    .button{
         margin-top: 50px;
     }
     .overlay{
