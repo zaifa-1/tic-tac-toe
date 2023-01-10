@@ -2,9 +2,8 @@
     --complement:#7224f7;
     --main:#22d3f7;
     --text:#d3f724;
-    --gameText:'Indie Flower','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --boardTextColor:#f7c724;
-
+    --gameText:'Indie Flower','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 *{
     margin: 0;
@@ -13,7 +12,7 @@
 header{
     text-align: center;
     font-size: x-large;
-    font-family: 'Fredoka One';
+    font-family: 'Fredoka One','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: capitalize;
     background-color: var(--complement);
     color: var(--text);
@@ -34,7 +33,7 @@ body{
     padding: 20px 0px ;
     text-align: center;
     box-sizing: border-box;
-    width: 700px;
+    width: 50%;
     font-weight: bold;
     font-size: 1.5em;
     margin: auto;
@@ -93,6 +92,8 @@ body{
 }
 .restart:hover{
     background-color: var(--main);
+    color: var(--complement);
+
 }
 
 .overlay{
@@ -117,4 +118,28 @@ body{
 .overlay.active{
     opacity: 1;
     pointer-events: all;
+}
+
+@media only screen and (max-width: 600px){
+    header{
+        font-size: 1.2em;
+        padding: 10px;
+    }
+    
+    .player-turn{
+        width: 70%;
+    }
+
+    .grid-container{
+        width: 350px;
+    }
+    .grid-item{
+        height: 130px;
+    }
+    .restart{
+        margin-top: 50px;
+    }
+    .overlay{
+        font-size: 3em;
+    }
 }
